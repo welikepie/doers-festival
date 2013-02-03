@@ -1,4 +1,4 @@
 doers
 =====
 
-Do'ers conf - a conference for people who ship
+Do'ers festival - a conference for people who ship
