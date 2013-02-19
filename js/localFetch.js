@@ -18,8 +18,10 @@ $.ajax({
 		}
 	},
 	error : function(response) {
+	//	var thing = JSON.parse(response);
 		console.log("not returning clean JSON.");
-		//console.log(response);
+		console.log(response["responseText"]);
+		//console.log(thing["responseText"]);
 		if(document.getElementById("headcount")!= undefined){
 		}
 		else{

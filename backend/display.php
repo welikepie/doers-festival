@@ -1,4 +1,5 @@
 <?php
+error_reporting(-1);
 require_once("commonVars.php");
 $fileName = $GLOBALS["fileName"]; //set in retrieve as well.
 $expireTime = $GLOBALS["expireTime"];
@@ -13,11 +14,14 @@ $expireTime = $GLOBALS["expireTime"];
 
 	try {
 	$result = file_get_contents($fileName);
+
+
 		$result = json_encode($result);
 		header('HTTP/1.1 200 OK', 200, true);
 	
 	} catch (Exception $e) {
-	
+	print($e->getMessage());
+
 		$result['error'] = $e->getMessage();
 		$result = json_encode($result);
 		header('HTTP/1.1 502 Bad Gateway', 502, true);
@@ -37,7 +41,8 @@ $expireTime = $GLOBALS["expireTime"];
 	header('Access-Control-Allow-Origin: *');
 	header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
 	
-	echo($result); unset($result);
+	echo($result); 
+	unset($result);
 	@ob_end_flush(); @flush();
 	
 	

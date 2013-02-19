@@ -39,13 +39,12 @@ foreach ($response["attendees"] as $attendees) {
 				if (strcasecmp($comp, $attendees["attendee"]["company"])) {$check = true;
 				}
 			}
-			if (!$check) {
+			if (!$check && $attendees["attendee"]["company"]!= "") {
 				array_push($resultsArr["Companies"], $attendees["attendee"]["company"]);
 			}
 		}
 	}
 }
-print_r($resultsArr);
 file_put_contents($fileName, json_encode($resultsArr));
 
 //EXAMPLE OF JSON RETURNED FROM QUERY;
