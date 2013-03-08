@@ -56,11 +56,56 @@ header .header-wrapper {
   width: 100%;
   float: left;
   background-color: #000000;
+  color: #ffffff;
 }
 .intro .intro-wrapper {
   width: 800px;
   margin: 0 auto;
   padding: 100px 0;
+}
+.intro .intro-wrapper .event-description {
+  float: left;
+  width: 400px;
+  padding: 0 16px 48px 0;
+}
+.intro .intro-wrapper .goals {
+  float: left;
+  width: 400px;
+  padding: 0 0 48px 32px;
+}
+.intro .intro-wrapper .goals ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.intro .intro-wrapper .goals ul li h3 {
+  float: left;
+  background-color: #ec1a2d;
+  display: block;
+  width: 55px;
+  height: 75px;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 36px;
+  line-height: 36px;
+}
+.intro .intro-wrapper .goals ul li h3 span {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 8px 0 4px 0;
+}
+.intro .intro-wrapper .goals ul li h2 {
+  float: left;
+  width: 300px;
+  padding: 16px;
+  margin: 0;
+}
+.intro .intro-wrapper .goals ul li p {
+  float: left;
+  width: 100%;
 }
 .attendees {
   width: 100%;
@@ -78,11 +123,22 @@ header .header-wrapper {
   text-align: right;
   padding: 0 8px 0 0;
   display: inline-block;
+  font-size: 140px;
+  font-family: 'Gentium Book Basic', serif;
+  font-weight: 700;
+  font-style: italic;
+  color: #363636;
 }
 .attendees .attendees-wrapper p {
   display: inline-block;
-  width: 300px;
+  width: 330px;
   padding: 0 0 0 8px;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 24px;
+  color: #363636;
+  text-transform: uppercase;
 }
 .event-info {
   width: 100%;
@@ -111,7 +167,7 @@ header .header-wrapper {
   display: inline-block;
 }
 .view {
-  width: 20%;
+  width: 260px;
   margin: 0px;
   float: left;
   border: 10px solid #fff;
@@ -151,17 +207,6 @@ header .header-wrapper {
   color: #fff;
   padding: 10px;
   text-align: center;
-}
-.view a.info {
-  display: inline-block;
-  text-decoration: none;
-  padding: 7px 14px;
-  background: #000;
-  color: #fff;
-  text-transform: uppercase;
-  -webkit-box-shadow: 0 0 1px #000;
-  -moz-box-shadow: 0 0 1px #000;
-  box-shadow: 0 0 1px #000;
 }
 .view-first img {
   -webkit-transition: all 0.2s linear;
@@ -218,24 +263,14 @@ header .header-wrapper {
   -ms-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
 }
-.view-first a.info {
-  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  opacity: 0;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-.view-first:hover .mask {
+.view-first .mask {
   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   opacity: 1;
 }
-.view-first:hover h2,
-.view-first:hover p,
-.view-first:hover a.info {
+.view-first h2,
+.view-first p,
+.view-first a.info {
   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   opacity: 1;
@@ -244,18 +279,4 @@ header .header-wrapper {
   -o-transform: translateY(0px);
   -ms-transform: translateY(0px);
   transform: translateY(0px);
-}
-.view-first:hover p {
-  -webkit-transition-delay: 0.1s;
-  -moz-transition-delay: 0.1s;
-  -o-transition-delay: 0.1s;
-  -ms-transition-delay: 0.1s;
-  transition-delay: 0.1s;
-}
-.view-first:hover a.info {
-  -webkit-transition-delay: 0.2s;
-  -moz-transition-delay: 0.2s;
-  -o-transition-delay: 0.2s;
-  -ms-transition-delay: 0.2s;
-  transition-delay: 0.2s;
 }
