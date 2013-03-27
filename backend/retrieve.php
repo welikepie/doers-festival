@@ -21,15 +21,17 @@ if ($company == true) {
 foreach ($questions as $question) {
 	$resultsArr[$question] = array();
 }
-
 foreach ($response["attendees"] as $attendees) {
 	//$resultsArr[$attendees["attendee"]["barcode"]] = array();
 	foreach ($questions as $qs) {
+		if(key_exists("answers", $attendees["attendee"])){
 		foreach ($attendees["attendee"]["answers"] as $ticketQs) {
 			if ($ticketQs["answer"]["question"] === $qs) {
 				array_push($resultsArr[$qs], $ticketQs["answer"]["answer_text"]);
 			}
 		}
+		}
+		
 	}
 	
 	if ($company == true) {

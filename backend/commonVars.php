@@ -5,7 +5,8 @@ $GLOBALS = array(
 		'fileName' => 'JSON.json', //filename to write json to.
 		'app_key' => "FZ2UAUQJY7JF36AL27", //individual app key
 		'user_key' => "129944955112066955589", //user key for accessing private info.
-		'event_id' => "5200871948", //event id. For future reference this is february's Geeky.
+		//'event_id' => "5200871948", //event id. For future reference this is february's Geeky.
+		'event_id' => "6030333891", //For future reference, this is not february's Geeky, but the event of the ID.
 		'expireTime' => 120, // time to expire in seconds. 120 as default.
 		'resultsArr' => array()
 	);

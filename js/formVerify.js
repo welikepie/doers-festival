@@ -1,74 +1,75 @@
+var option = 3;
+		//OPTION ONE : Set all values back to null, produce a div above submit button.
+		//OPTION TWO : remove form from markup completely.
+		//OPTION THREE : remove form from markup completely and leave a div with a success message in it
+
 var submitted=false;
+var errorAppend = "_error";
+var contentAppend = "form_";
+var idArr = ["name", "contact", "talkContent", "whyHowWhat", "wow"];
+var errorMessages = ["It seems you forgot to tell us your name!", 
+"You totally forgot to tell us how to reach you.",
+"We need to know what your talk is about!",
+"We need to know how you went about your awesome project!",
+"Your time to shine, and you forgot all about it! Impress us!"];
+var formError = "You've forgotten to tell us some things. We're really interested, so please fix them!";
+var errorDiv =  "<div class = \"boxLeftEmpty\"><div class = \"text\"><strong>Warning!</strong> <span class='FormErrorContent'></span></div></div> " ;
+var successDiv = "<div class = \"successfulSubmit\"><div class = \"text\"><strong>Success!</strong> <span id='FormSuccessContent'></span></div></div> " ;
+var successMessage = "Thanks! We can't wait to read your proposal!";
+
+function onceSubmitted(){
+		
+		if(option == 1){
+			for(var i = 0; i < idArr.length; i++){
+				document.getElementById(contentAppend+idArr[i]).value = "";
+			}
+			document.getElementById("form_showOff").value = "";
+			document.getElementById("submitWarning").innerHTML = successDiv;
+			document.getElementById("FormSuccessContent").innerHTML = successMessage;
+		}
+
+		if(option == 2){
+			var formToRemove = document.getElementById("googleForm");
+			formToRemove.parentNode.removeChild(formToRemove);
+		}
+		if(option == 3){
+		document.getElementById("form").innerHTML = successDiv;
+		document.getElementById("FormSuccessContent").innerHTML = successMessage;
+		}
+		
+}
+
+function formsubmit() {
+	for(var i = 0; i < idArr.length; i++){
+		document.getElementById(idArr[i]+errorAppend).innerHTML = "";
+	}
+	document.getElementById("submitWarning").innerHTML = "";
+	var errorCount = 0;
+	for(var i = 0; i < idArr.length; i++){
+		var test = document.getElementById(contentAppend+idArr[i]).value;
+		if(test == "" || test == null){
+	//		console.log(idArr[i]+errorAppend);
+			document.getElementById(idArr[i]+errorAppend).innerHTML = errorDiv;
+			document.getElementsByClassName("FormErrorContent")[errorCount].innerHTML = errorMessages[i];
+				errorCount++;
+		}
+	}
+	if(document.getElementsByClassName("FormErrorContent").length > 0){
+		document.getElementById("submitWarning").innerHTML = errorDiv;
+		document.getElementsByClassName("FormErrorContent")[document.getElementsByClassName("FormErrorContent").length-1].innerHTML = formError;
+		return false;
+	}
+	else{
+	
+		return true;
+	}
+}
+
 setTimeout(function() { //onload element doesn't trigger properly in iframes in chrome. (maybe webkit). onReady is set before anything is loaded, causing this.
        document.getElementById("hidden_iframe").onload = function() {
          if(submitted == true)
 							{
-								document.getElementsByClassName("form")[0].innerHTML = "Thanks for submitting the form!";
+								onceSubmitted();
 							}
        }
 }, 2);
-
-function formsubmit() {
-
-	var x=document.forms["speakerform"]["entry.0.single"].value;
-	var y=document.forms["speakerform"]["entry.1.single"].value;
-
-if (( x == null || x == "" ) && ( y == null || y == ""))
-	{
-	document.getElementById("speaker").innerHTML = 
- "<div class = \"boxLeftEmpty\">"+
-			"<div class = \"text\"><strong>Warning!</strong> Oh dear, it seems you forgot to tell us the name of the speaker you'd like to see. Please type that in in the \"Name\" section and submit the form again at the bottom of the page. "+		
-		"</div></div> " ;
-		
-	document.getElementById("contactSpeaker").innerHTML =  
-	"<div class = \"boxLeftEmpty\">"+
-			"<div class = \"text\"><strong>Warning!</strong> Whoops, it seems you forgot to include how we can contact the speaker. Please type that in and give us their details so we can get in touch with them and get some ideas going."+		
-		"</div></div> " ;
-		
-		document.getElementById("submitWarning").innerHTML =  
-	"<div class = \"boxLeftEmpty bottomShove\">"+
-	"<div class = \"text\"><strong>Warning!</strong> How mysterious of you, you didn't tell us your suggested speakers' name or contact details. Please fill in both the name and contact sections of the form and submit at the bottom of the page so we know who they are.</div>"+					
-		"</div></div> " ;
-	
-	
-	return false;
-	}
-
-	if (x==null || x=="")
-	  {
-	  	document.getElementById("contactSpeaker").innerHTML = "";
-	  
-	  
-		document.getElementById("speaker").innerHTML = 
- "<div class = \"boxLeftEmpty\">"+
-			"<div class = \"text\"><strong>Warning!</strong>  Oh dear, it seems you forgot to tell us the name of the speaker you'd like to see. Please type that in in the \"Name\" section and submit the form again at the bottom of the page. "+		
-		"</div></div> " ;
-		
-		document.getElementById("submitWarning").innerHTML =  
-	"<div class = \"boxLeftEmpty bottomShove\">"+
-			"<div class = \"text\"><strong>Warning!</strong>  Oh dear, it seems you forgot to tell us the name of the speaker you'd like to see. Please type that in in the \"Name\" section and submit the form again at the bottom of the page. "+					
-		"</div></div> " ;	
-		
-	  return false;
-	  }
-	
-
-	if (y==null || y=="")
-	  {
-	  	document.getElementById("speaker").innerHTML = "";
-	  
-	document.getElementById("contactSpeaker").innerHTML =  
-	"<div class = \"boxLeftEmpty\">"+
-			"<div class = \"text\"><strong>Warning!</strong> Whoops, it seems you forgot to include how we can contact the speaker. Please type that in and give us their details so we can get in touch with them and get some ideas going."+					
-		"</div></div> " ;
-	
-		document.getElementById("submitWarning").innerHTML =  
-	"<div class = \"boxLeftEmpty bottomShove\">"+
-		"<div class = \"text\"><strong>Warning! </strong> Whoops, it seems you forgot to include how we can contact the speaker. Please type that in and give us their details so we can get in touch with them and get some ideas going."+					
-		"</div></div> " ;
-
-	  return false;
-
-	  }
-return true;
-}
