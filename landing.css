@@ -1,0 +1,28 @@
+/* CSS crunched with Crunch - http://crunchapp.net/ */
+.openSans{font-family:'Open Sans',sans-serif;}
+.big-text{font-size:36px;line-height:36px;}
+.medium-text{font-size:18px;line-height:24px;}
+.small-text{font-size:14px;line-height:16px;}
+*{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+body{font-family:'Gentium Book Basic',serif;padding:0;margin:0;}body #hidden_iframe{display:none;width:0;height:0;}
+body .forkit{position:absolute;top:0;width:200px;height:150px;font-family:'Lato',sans-serif;text-decoration:none;}body .forkit .tag{display:block;height:32px;width:202px;background-color:#000000;text-align:center;font-size:13px;font-weight:bold;line-height:30px;box-shadow:0px 0px 10px rgba(0, 0, 0, 0.4);-moz-box-shadow:0px 0px 10px rgba(0, 0, 0, 0.4);-webkit-transform-origin:15px 0px;-moz-transform-origin:15px 0px;-ms-transform-origin:15px 0px;-o-transform-origin:15px 0px;transform-origin:15px 0px;letter-spacing:1px;}body .forkit .tag .textBit{color:#eeeeee;}
+body .forkit .tag #left{-webkit-transform:rotate(180deg);transform:rotate(180deg);-o-transform:rotate(180deg);-moz-transform:rotate(180deg);}
+body .forkit .tag:after{content:'';display:block;position:absolute;top:0;width:196px;height:26px;margin:1px;border:2px solid #eeeeee;}
+body .forkit .string{display:block;height:1px;width:0px;position:absolute;background:rgba(255, 255, 255, 0.7);box-shadow:0px 0px 10px rgba(0, 0, 0, 0.4);-moz-box-shadow:0px 0px 10px rgba(0, 0, 0, 0.4);-webkit-transform-origin:0px 0px;-moz-transform-origin:0px 0px;-ms-transform-origin:0px 0px;-o-transform-origin:0px 0px;transform-origin:0px 0px;}
+body .forkit-curtain{position:absolute;width:100%;height:100%;top:-100%;left:0;background:rgba(0, 0, 0, 0.9);overflow-y:hidden;}body .forkit-curtain #wrapper{position:absolute;bottom:0;left:0;width:100%;text-align:center;}body .forkit-curtain #wrapper .close-button{position:absolute;width:32px;height:32px;right:20px;top:20px;cursor:pointer;background-color:rgba(255, 255, 255, 0.2);}
+h1{text-align:center;}h1 span#underFont{font-family:'Open Sans',sans-serif;font-style:normal;font-size:28px;}
+h1 span{display:block;font-size:36px;text-transform:uppercase;font-style:italic;line-height:1em;}
+h1 strong{font-family:'Open Sans',sans-serif;display:block;font-size:72px;text-transform:uppercase;line-height:1em;margin:0 0 10px 0;}
+h2,h3,h4{text-align:center;display:block;font-family:'Open Sans',sans-serif;color:#ffffff;}
+header{width:100%;background-color:#ffffff;}header .header-wrapper{width:800px;margin:0 auto;padding:96px 0;}
+.data{width:100%;float:left;background-color:#000000;}.data .data-wrapper{width:800px;margin:0 auto;padding:100px 0;}.data .data-wrapper #formWrapper{margin:20px auto 0 auto;width:460px;}.data .data-wrapper #formWrapper form #submitWarning{font-family:'Open Sans',sans-serif;color:#ffffff;margin-top:20px;clear:both;float:left;font-size:14px;}
+.data .data-wrapper #formWrapper form .FormFailContent{font-family:'Open Sans',sans-serif;margin-top:20px;color:#ffffff;}
+.data .data-wrapper #formWrapper form .errorWrapper{color:#ffffff;margin-top:20px;clear:both;float:left;}.data .data-wrapper #formWrapper form .errorWrapper .FormErrorContent{font-size:14px;}
+.data .data-wrapper #formWrapper form label{float:left;font-size:14px;padding-top:6px;padding-bottom:6px;margin-right:16px;color:#ffffff;}
+.data .data-wrapper #formWrapper form input[type="text"]{float:left;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;border:1px solid #b7c7cf;-webkit-box-shadow:0 0 0 8px rgba(255, 255, 255, 0.15);-moz-box-shadow:0 0 0 8px rgba(255, 255, 255, 0.15);box-shadow:0 0 0 8px rgba(255, 255, 255, 0.15);padding:5px 20px 5px 20px;font-size:14px;margin-right:16px;}
+.data .data-wrapper #formWrapper form input#submit{margin-left:6px;padding:5px 20px 5px 20px;font-size:14px;font-style:bold;color:#fff;border:1px solid #b7c7cf;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#ec1a2d;-webkit-box-shadow:0 0 0 8px rgba(255, 255, 255, 0.15);-moz-box-shadow:0 0 0 8px rgba(255, 255, 255, 0.15);box-shadow:0 0 0 8px rgba(255, 255, 255, 0.15);}
+.data .data-wrapper #formWrapper form input#submit:hover,.data .data-wrapper #formWrapper form input#submit:focus{background:#DA1224;-webkit-box-shadow:0 0 0 8px rgba(255, 255, 255, 0.15);-moz-box-shadow:0 0 0 8px rgba(255, 255, 255, 0.15);box-shadow:0 0 0 8px rgba(255, 255, 255, 0.15);}
+.data .data-wrapper p{font-style:italic;font-size:14px;position:relative;color:#ffffff;padding:10px;text-align:center;}
+.data .data-wrapper h1{color:white;}
+.data .data-wrapper a{text-decoration:none;color:#ffffff;}
+.data .data-wrapper a:hover{text-decoration:underline;}
